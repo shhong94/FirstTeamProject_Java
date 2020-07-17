@@ -9,11 +9,12 @@ public class MovieMainForm extends JFrame{
 	ControllPanel cp = new ControllPanel();
 	
 	public MovieMainForm() {
+		// 화면 레이아웃 : null
 		setLayout(null);
-		// 상단 메뉴
+		// 상단 메뉴(MenuForm 클래스)
 		mf.setBounds(400, 30, 800, 50);
 		add(mf);
-		// 출력 창
+		// 출력 창(ControllPanel 클래스)
 		cp.setBounds(50, 100, 1500, 700);
 		add(cp);
 		
