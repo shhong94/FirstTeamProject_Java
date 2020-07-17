@@ -1,5 +1,5 @@
 package com.sist.client;
 
-public class DetailedPage {
+public class PageScheduled {
 
 }
