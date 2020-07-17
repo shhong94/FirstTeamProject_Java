@@ -16,6 +16,5 @@ public class ControllPanel extends JPanel{
 		setOpaque(true);
 		setLayout(card);
 		
-		
 	}
 }
