@@ -14,20 +14,20 @@ public class MovieMainForm extends JFrame implements ActionListener{
 		setLayout(null);
 		// 상단 메뉴(MenuForm 클래스)
 		mf.setBounds(270, 85, 800, 50);
+		add(mf);
 		// (예약버튼)
 		JPanel p=new JPanel();
-		p.setBounds(600, 880, 200, 50);
+		p.setBounds(1300, 85, 200, 50);
+		p.setLayout(new GridLayout());
 		p.add(mf.reserve);
-		add(p);		
-		add(mf);
+		add(p);				
 				
 		// 출력 창(ControllPanel 클래스)
 		cp.setBounds(40, 170, 1240, 690);
 		add(cp);
 		// 채팅 창
 		cf.setBounds(1300, 170, 255, 690);
-		add(cf);
-		
+		add(cf);		
 		
 		// 윈도우 창
 		setSize(1600, 1000);
@@ -49,10 +49,25 @@ public class MovieMainForm extends JFrame implements ActionListener{
 		new MovieMainForm();
 
 	}
-
+	
+	public static Image getImage(ImageIcon ii,int w,int h)
+    {
+    	Image dimg = ii.getImage().getScaledInstance(w, h,
+    	        Image.SCALE_SMOOTH);
+    	return dimg;
+    }//	라벨크기에 맞춰 이미지의 크기 조절
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getSource()==mf.home) {
+			cp.card.show(cp, "HOME");
+		}else if(e.getSource()==mf.pageOnShow) {
+			cp.card.show(cp, "POS");
+		}else if(e.getSource()==mf.pageScheduled) {
+			cp.card.show(cp, "PS");
+		}else if(e.getSource()==mf.pageRank) {
+			cp.card.show(cp, "PR");
+		}
 	}
 
 }

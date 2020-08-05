@@ -25,7 +25,7 @@ public class MenuForm extends JPanel{
 		
 		reserve = new JButton("예매하기");
 		reserve.setFont(new Font("굴림체",Font.BOLD,30));
-				
+						
 		
 		// 레이아웃 : 그리드
 		setLayout(new GridLayout(1, 4, 1, 10));
